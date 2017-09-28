@@ -37,14 +37,14 @@ $ ->
         if input.length
           (input.data('ajax-search-fields') or '').split(' ').some (ajaxField) ->
             ajaxField.length > 0 && relatedInput(ajaxField).attr('id') == initial_input_id
-
+			sortField = ordering.split(',').map((clause)->
+          c = clause.trim().split(' ')
+          { field: c[0], direction: c[1] }).concat({field: '$score'})
       select.selectize
         valueField: valueField
         labelField: searchFields[0]
         searchField: searchFields
-        sortField: ordering.split(',').map (clause)->
-          c = clause.trim().split(' ')
-          { field: c[0], direction: c[1] }
+        sortField: sortField
         options: []
         create: false
         render:
