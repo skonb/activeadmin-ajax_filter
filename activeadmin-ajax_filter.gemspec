@@ -22,6 +22,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'activeadmin', '>= 1.0.0.pre1'
   gem.add_dependency 'rails', '>= 4'
   gem.add_dependency 'coffee-rails', '>= 4.1.0'
+  gem.add_dependency 'selectize-rails', '>= 0.11.2'
   gem.add_dependency 'has_scope', '>= 0.6.0' # Force Ruby 2.1.5 support
   gem.add_development_dependency 'bundler', '~> 1.10'
   gem.add_development_dependency 'rake', '~> 10.0'
@@ -34,6 +35,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'capybara', '~> 2.1'
   gem.add_development_dependency 'phantomjs', '~> 2.1.1'
   gem.add_development_dependency 'poltergeist', '~> 1.10.0'
+  gem.add_development_dependency 'selectize-rails', git: "git@github.com:skonb/selectize-rails"
   gem.add_development_dependency 'database_cleaner', '~> 1.5.0'
   gem.add_development_dependency 'launchy', '~> 2.4.3'
 end
